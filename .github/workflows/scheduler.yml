@@ -14,4 +14,4 @@ jobs:
           API_URL: ${{ secrets.api_url }}
           API_KEY: ${{ secrets.api_key }}
         run: |
-          curl --url "$API_URL" -H "Authorization: Bearer $API_KEY"
+          curl --url "$API_URL" -H "Authorization: $API_KEY"
