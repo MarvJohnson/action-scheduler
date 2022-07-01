@@ -9,7 +9,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: first_step
+      - name: send-curl
         env:
           API_URL: ${{ secrets.api_url }}
           API_KEY: ${{ secrets.api_key }}
