@@ -13,6 +13,5 @@ jobs:
         env:
           API_URL: ${{ secrets.api_url }}
           API_KEY: ${{ secrets.api_key }}
-          API_SECRET: ${{ secrets.api_secret }}
         run: |
-          curl --url "$API_URL" -d "apiKey=$API_KEY&apiSecret=$API_SECRET"
+          curl --url "$API_URL" -H "Authorization: Bearer $API_KEY"
