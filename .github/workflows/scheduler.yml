@@ -15,4 +15,4 @@ jobs:
           API_KEY: ${{ secrets.api_key }}
           API_SECRET: ${{ secrets.api_secrets }}
         run: |
-          echo "apiKey=$API_KEY&apiSecret=$API_SECRET" | curl --url "$API_URL" -d@-
+          apiUrl=$(echo "$API_URL");echo "apiKey=$API_KEY&apiSecret=$API_SECRET" | curl --url $apiUrl -d@-
