@@ -8,5 +8,5 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      name: first_step
-      run: echo "This just ran!"
+      - name: first_step
+        run: echo "This just ran!"
