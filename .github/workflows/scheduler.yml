@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first_step
-        run: echo "This just ran!"
+        run: echo {{ secrets.test }}
