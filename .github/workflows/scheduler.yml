@@ -10,4 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: first_step
-        run: echo {{ secrets.test }}
+        env:
+          TEST: ${{ secrets.test }}
+        run: echo "$TEST"
