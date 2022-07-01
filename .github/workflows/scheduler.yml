@@ -13,6 +13,6 @@ jobs:
         env:
           API_URL: ${{ secrets.api_url }}
           API_KEY: ${{ secrets.api_key }}
-          API_SECRET: ${{ secrets.api_secrets }}
+          API_SECRET: ${{ secrets.api_secret }}
         run: |
-          apiUrl=$(echo "$API_URL");echo "apiKey=$API_KEY&apiSecret=$API_SECRET" | curl --url $apiUrl -d@-
+          echo "apiKey=$API_KEY&apiSecret=$API_SECRET" | curl --url "$API_URL" -d@-
