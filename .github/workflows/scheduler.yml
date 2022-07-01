@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: first_step
         env:
-          TEST: ${{ secrets.test }}
+          API_URL: ${{ secrets.api_url }}
+          API_KEY: ${{ secrets.api_key }}
+          API_SECRET: ${{ secrets.api_secrets }}
         run: |
-          echo "message=$TEST" | curl --url "https://aa20-68-108-187-54.ngrok.io" -d@-
+          echo "apiKey=$API_KEY&apiSecret=$API_SECRET" | curl --url "$API_URL" -d@-
