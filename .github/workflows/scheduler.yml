@@ -1,0 +1,12 @@
+name: scheduler
+
+on:
+  schedule:
+    - cron: '0/5 * * * *'
+    
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      name: first_step
+      run: echo "This just ran!"
